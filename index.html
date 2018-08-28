@@ -5,7 +5,6 @@
 	<title>cities</title>
 </head>
 <body>
-	<h1>Угадай название города используя только строчные буквы</h1>
 	<script>
 		var words = ['киев','милан','барселона','марсель','дюссельдорф','копенгаген',
 		'вашигтон','бухарест','варшава','бохум','нюрнберг'];
@@ -16,9 +15,12 @@
 		}
 		var remainingLetters = word.length;
 
+
 		while(remainingLetters > 0){
+
 			alert(answerArray.join(''));
 			var guess = prompt('Угадайте букву, или нажмите Отмена для выхода из игры.');
+			guess=guess.toLowerCase();
 			if(guess === null){
 				break;
 			}else if(guess.length !== 1){
